@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Bowlby+One&family=Neucha&family=Peralta&family=Quicksand:wght@300..700&family=Ranchers&display=swap');
+
+*{
+	margin:0;
+	padding:0;
+}
+
+.app {
+	display: grid;
+	grid-template: .2fr 3fr / 1fr 1fr;
+	background-color: #F6E8EA;
+	height: 100vh;
+}
+.header {
+	display: grid;
+	grid-area: 1 / 1 / 2 / 2;
+	justify-self: center;
+	padding: 15px;
+}
+
+h1 {
+	color: #EF626C;
+	align-self: end;
+	font-family: 'Atma';
+	font-size: 40px;
+}
+
+h3, h2 {
+	color: #312F2F;
+	font-family: 'Atma';
+	font-weight: 600;
+}
+
+.scores {
+	display: grid;
+	grid-area: 1/2/2/3;	
+	justify-self: center;
+	padding: 15px;
+}
+
+.cards {
+	display: grid;
+	grid-area: 2/1/2/3;
+	grid-template: repeat(4, 1fr)/repeat(4, 1fr);
+	justify-self: center;
+	gap: 10px;
+	margin-bottom: 15px;
+
+}
+
+button {
+	 background-color: #84DCCF;
+	 width: 120px;
+	 height: 120px;
+	 border: none;
+}
+
+img {
+	width: 80px;
+	height: 80px;
+}
+
