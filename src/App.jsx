@@ -4,10 +4,8 @@ import './index.css';
 function App() {
   const [stickers, setStickers] = useState([]);
   const [clickedButtons, setClickedButtons] = useState([]);
-  const [score, setScore] = useState(15);
+  const [score, setScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
-
-  let winningMessage = "";
 
   const shuffleArray = (array) => {
     const shuffled = [...array];
@@ -42,9 +40,6 @@ function App() {
       setScore(0);
       setClickedButtons([]);
 
-    } else if (score === 16) {
-      winningMessage = "You win!";
-
     } else {
       // New unique click
       setClickedButtons([...clickedButtons, stickerId]);
@@ -53,8 +48,8 @@ function App() {
       setStickers(prev => shuffleArray(prev));
 
     }
-    
-  };
+  }; 
+
   return (
     <div className='app'>
       <div className='header'>
@@ -79,7 +74,6 @@ function App() {
         </button>
       ))}
     </div>
-    <h2>{winningMessage}</h2>
   </div>
 );
 }
